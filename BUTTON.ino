@@ -113,13 +113,14 @@ void MENU_entr(int index)
     if (index==6) TX_current();//COIL_CURRENT
     if (index==7) F_scan();// RESONACE 
     if (index==8) Ferit_seting();
+    if (index==9) New_Menu_Item();// НОВИЙ ПУНКТ МЕНЮ
 
 }
 
 //-------------------------------------Menu()-------------------------------------------------------------------------------------
 void Menu()
 {
-#define MENU_size 8 
+#define MENU_size 9 
 static int MENU_index = 1;
 
 static char* MENU_Strings[]=
@@ -133,6 +134,7 @@ static char* MENU_Strings[]=
 "7# TX CURRENT",
 "8# RESONACE",
 "9# FERRIT SET",
+"10# NEW ITEM",
 };
 
 int N_MENU = MENU(MENU_index, MENU_size, MENU_Strings , MENU_entr);

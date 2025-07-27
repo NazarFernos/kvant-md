@@ -887,4 +887,24 @@ if( micros_2-micros_1>=25000)
 Tic=0;
 lcd.clear();  
 }
+
+//--------------------------------------------New_Menu_Item---------------------------------------------------------
+void New_Menu_Item()
+{
+  lcd.clear();
+  lcd.print("New Menu Item");
+  lcd.setCursor(0,1);
+  lcd.print("Press any key");
+  
+  while (true)
+  { 
+   if( Button_read(1)) {Button_enter(); break;}
+   if( Button_read(2)) {Button_enter(); break;}
+   if( Button_read(3)) {Button_enter(); break;}
+   if( Button_read(4)) {Button_enter(); break;}
+   if( Button_read(5)) {Button_enter(); break;}
+   check_button();
+   delay(100);
+  }
+}
   
